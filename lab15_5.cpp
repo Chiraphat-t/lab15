@@ -20,3 +20,27 @@ int main(){
 
 //Do not modify the code above this line
 //Write definition of shuffle() using pointer after this line. 
+
+void shuffle(int *a,int *b,int *c,int *d){
+	for (int i = 0; i < 4; i++)
+	{
+	
+	int x=rand()%4;
+	if(x==0){
+		int y = *a;
+		*a=*b; *b=y;
+		}
+	else if(x==1){
+		int y = *c;
+		*c=*d; *d=y;
+		}
+	else if(x==2){
+		int y = *b;
+		*b=*c; *c=y;
+		}
+	else if(x==3){
+		int y = *d;
+		*d=*a; *a=y;
+			}	
+	}
+}
